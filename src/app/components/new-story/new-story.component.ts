@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { StoryService } from "../../services/story.service";
+import { AuthService } from "../../services/auth.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-new-story',
@@ -7,8 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewStoryComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(
+    private myAuthService: AuthService,
+    private myRouter: Router,
+    private myStoryService: StoryService
+  ) {}
+  
   ngOnInit() {
   }
 
