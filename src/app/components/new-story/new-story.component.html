@@ -1,3 +1,22 @@
-<p>
-  new-story works!
-</p>
+<h3>Add a new letter</h3>
+  <p *ngIf="savingErr" class="error">
+    {{ savingErr }}
+  </p>
+
+<form (ngSubmit)="saveNewStory()">
+
+  <label for="story-category-input"> Letter Category </label>
+  <input id="story-category-input" type="text" placeholder="letter category" [(ngModel)]="storyData.category" name="category" required>
+  <br>
+
+  <label for="story-title-input"> Letter Title </label>
+  <input id="story-title-input" type="text" placeholder="letter title" [(ngModel)]="storyData.title" name="title">
+  <br>
+
+  <label for="story-content-input"> Letter Content </label>
+  <input id="story-content-input" type="text" placeholder="letter content" [(ngModel)]="storyData.content" name="content">
+  <br>
+
+
+  <button> Save Letter </button>
+</form>

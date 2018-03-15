@@ -13,4 +13,12 @@ export class StoryService {
     { withCredentials: true })
     .map(res => res.json())
   }
+
+  createNewStory(dataToSend){
+    return this.myHttp
+    .post(`${environment.apiBase}/api/stories`, dataToSend,
+    {withCredentials: true})
+    .toPromise()
+    .then(res => res.json());
+  }
 }

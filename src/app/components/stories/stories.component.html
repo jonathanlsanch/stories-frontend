@@ -1,7 +1,7 @@
 <div *ngIf="currentUser">
   <header>
     <p> Hello, {{ currentUser.username }}. </p>
-    <a [routerLink]="['/add-story']">Add a new story</a>
+    <a [routerLink]="['/add-story']">Add a new letter</a>
     <button (click)="logMeOutPls()"> Log Out </button>
     <p *ngIf="logoutError" class="error">
       {{ logoutError }}
