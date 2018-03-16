@@ -16,6 +16,7 @@ import { StoryService } from "./services/story.service";
 import { AppRoutingModule  } from './app-routing.module';
 import { StoriesComponent } from './components/stories/stories.component';
 import { NewStoryComponent } from './components/new-story/new-story.component';
+import { StoryDetailsComponent } from './components/story-details/story-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NewStoryComponent } from './components/new-story/new-story.component';
     SignupComponent,
     LoginComponent,
     StoriesComponent,
-    NewStoryComponent
+    NewStoryComponent,
+    StoryDetailsComponent
   ],
   imports: [
     BrowserModule,

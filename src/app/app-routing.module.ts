@@ -4,6 +4,7 @@ import { SignupComponent } from "./components/signup/signup.component";
 import { LoginComponent } from "./components/login/login.component";
 import { StoriesComponent } from "./components/stories/stories.component";
 import { NewStoryComponent } from './components/new-story/new-story.component';
+import { StoryDetailsComponent } from './components/story-details/story-details.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,11 @@ const routes: Routes = [
   {
       path: "add-story",
       component: NewStoryComponent
-  }
+  },
+  {
+    path: "stories/:id",
+    component: StoryDetailsComponent
+}
 ];
 
 @NgModule({
