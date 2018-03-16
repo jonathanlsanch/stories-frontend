@@ -33,9 +33,16 @@ export class StoryService {
     .then(res => res.json());
   }
 
-  // updateStory(id, updates){
-  //   return this.myHttp.put(`${environment.apiBase}/api/stories/${id}`, updates, 
-  //   { withCredentials: true })
-  //   .map(res => res.json());
-  // }
+  updateStory(id, updates){
+    return this.myHttp.put(`${environment.apiBase}/api/stories/${id}`, updates, 
+    { withCredentials: true })
+    .map(res => res.json());
+  }
+
+  deleteStory(id){
+    return this.myHttp.delete(`${environment.apiBase}/api/stories/${id}`,
+        { withCredentials: true })
+        .toPromise()
+  }
+
 }

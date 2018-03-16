@@ -1,20 +1,25 @@
-<a [routerLink]="['/stories']">back to letters</a>
-<h1>{{ story.title }}</h1>
-<br>
-<p> Category: <i> {{ story.category }} </i> </p>
-<br>
-<p> <i> {{ story.content }} </i> </p>
-
-<!-- <p>Update Story</p>
-<form (ngSubmit)="doTheUpdate(story._id, myForm" #myForm="ngForm">
-  <label for="story-category-input">Letter Category</label>
-  <input id="story-title-input" type="text" [(ngModel)]="story.category" name="category" value="{{story.category}}">
-
-  <label for="story-category-input">Letter Title</label>
-  <input id="story-title-input" type="text" [(ngModel)]="story.title" name="title" value="{{story.title}}">
-
-  <label for="story-category-input">Letter Content</label>
-  <input id="story-title-input" type="text" [(ngModel)]="story.content" name="content" value="{{story.content}}">
+<h2>{{ story.title }}</h2>
+<p>{{ story.category }}</p>
+<p><i>{{ story.content }}</i></p>
 
 
-</form> -->
+<button *ngIf="story._id" (click)="deleteThisStory()">DELETE LETTER</button>
+
+<div>
+  <a [routerLink]="['/stories']">Back to Letters</a>
+</div>
+
+<!-- update stories area -->
+
+<form (ngSubmit)="doTheUpdate(story._id, myForm)" #myForm="ngForm" >
+  <label for="story-category-input"> Letter Category </label>
+  <input id="story-category-input" type="text"  [(ngModel)]="story.category" name="category" value="{{ story.category }}">
+  <br>
+  <label for="story-title-input"> Letter Name </label>
+  <input id="story-title-input" type="text"  [(ngModel)]="story.title" name="title" value="{{ story.title }}">
+  <br>
+  <label for="story-content-input"> Letter Content </label>
+  <input id="story-content-input" type="text"  [(ngModel)]="story.content" name="content" value="{{ story.content }}">
+  <br>
+  <button type="submit">Update Letter</button>
+</form>

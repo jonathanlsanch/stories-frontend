@@ -12,7 +12,16 @@ import "rxjs/add/operator/toPromise";
   styleUrls: ['./story-details.component.css']
 })
 export class StoryDetailsComponent implements OnInit {
-  story: Object;
+  story = <any>{};
+
+  public updatedStory: Object = {};
+  public category: String;
+  public title: String;
+  public content: String;
+
+  saveError = "";
+
+  baseUrl = environment.apiBase;
 
   constructor(
     private myAuthService: AuthService,
@@ -36,15 +45,55 @@ export class StoryDetailsComponent implements OnInit {
     });
   }
 
-  //getting a story and pulling it's details
-  getStoryDetails(parameter){
-    this.myStoryService.getId(parameter)
-    .then( res => {
-      this.story = res;
-      console.log("story details: ", this.story)
-    })
-    .catch()
+  // getting one story and its details
+  getStoryDetails(id) {
+    this.myStoryService.getId(id).then(theStoryDetails => {
+      this.story = theStoryDetails;
+    });
   }
+
+  doTheUpdate(id, formData) {
+    // console.log("=============== id: ", id);
+    const formInfo = formData.form.controls;
+    console.log("=============== formData: ", formInfo.category);
+    this.category = formInfo.category.value;
+    this.title = formInfo.title.value;
+    this.content = formInfo.content.value;
+    this.sendUpdatesToApi(id);
+  }
+
+  sendUpdatesToApi(id){
+    this.updatedStory = {
+      category: this.story.category,
+      title: this.story.title,
+      content: this.story.content 
+    };
+    console.log("updates:", this.updatedStory)
+    this.myStoryService.updateStory(id, this.updatedStory)
+      .toPromise()
+      .then(()=>{
+        this.myRouter.navigate(['/stories'])
+      })
+      .catch()
+  }
+
+  deleteThisStory(){
+    if (!confirm("Are you sure you want to delete this letter?")) {
+      return;
+    }
+    this.myStoryService
+      .deleteStory(this.story._id)
+      .then(() => {
+        console.log("Success");
+        this.myRouter.navigate(["/stories"]);
+      })
+      .catch(err => {
+        alert("Sorry! Something went wrong.");
+        console.log("Letter Delete Error");
+        console.log(err);
+      });
+  }
+
 
 
 }
