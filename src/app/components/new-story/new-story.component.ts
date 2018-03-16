@@ -13,7 +13,11 @@ export class NewStoryComponent implements OnInit {
   storyData = {
     category: "",
     title: "",
-    content: ""
+    salutation: "",
+    recipient: "",
+    content: "",
+    signoff: "",
+    sender: ""
   };
 
   savingErr: string;
@@ -34,7 +38,11 @@ export class NewStoryComponent implements OnInit {
       this.storyData = {
         category: "",
         title: "",
-        content: ""
+        salutation: "",
+        recipient: "",
+        content: "",
+        signoff: "",
+        sender: ""
       } 
       this.savingErr = "";
       this.myRouter.navigate(['/stories'])

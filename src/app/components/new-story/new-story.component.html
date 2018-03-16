@@ -1,22 +1,41 @@
-<h3>Add a new letter</h3>
-  <p *ngIf="savingErr" class="error">
-    {{ savingErr }}
-  </p>
+<div class="new-container">
+  <h3>Write a New Letter</h3>
+    
+    <p *ngIf="savingErr" class="error">
+      {{ savingErr }}
+    </p>
 
-<form (ngSubmit)="saveNewStory()">
+  <form (ngSubmit)="saveNewStory()">
 
-  <label for="story-category-input"> Letter Category </label>
-  <input id="story-category-input" type="text" placeholder="letter category" [(ngModel)]="storyData.category" name="category" required>
-  <br>
+    <label for="story-category-input"> Letter Category </label>
+    <input id="story-category-input" type="text" placeholder="letter category" [(ngModel)]="storyData.category" name="category" required>
+    <br>
 
-  <label for="story-title-input"> Letter Title </label>
-  <input id="story-title-input" type="text" placeholder="letter title" [(ngModel)]="storyData.title" name="title">
-  <br>
+    <label for="story-title-input"> Letter Title </label>
+    <input id="story-title-input" type="text" placeholder="letter title" [(ngModel)]="storyData.title" name="title">
+    <br>
 
-  <label for="story-content-input"> Letter Content </label>
-  <input id="story-content-input" type="text" placeholder="letter content" [(ngModel)]="storyData.content" name="content">
-  <br>
+    <label for="story-salutation-input"> Letter Salutation </label>
+    <input id="story-salutation-input" type="text" placeholder="letter salutation" [(ngModel)]="storyData.salutation" name="salutation">
+    <br>
 
+    <label for="story-recipient-input"> Letter Recipient </label>
+    <input id="story-recipient-input" type="text" placeholder="letter recipient" [(ngModel)]="storyData.recipient" name="recipient">
+    <br>
 
-  <button> Save Letter </button>
-</form>
+    <label for="story-content-input"> Letter Content </label>
+    <input id="story-content-input" type="text" placeholder="letter content" [(ngModel)]="storyData.content" name="content">
+    <br>
+
+    <label for="story-signoff-input"> Letter Signoff </label>
+    <input id="story-signoff-input" type="text" placeholder="letter signoff" [(ngModel)]="storyData.signoff" name="signoff">
+    <br>
+
+    <label for="story-sender-input"> Sender </label>
+    <input id="story-sender-input" type="text" placeholder="letter sender" [(ngModel)]="storyData.sender" name="sender">
+    <br>
+
+    <button> Save Letter </button>
+
+  </form>
+</div>

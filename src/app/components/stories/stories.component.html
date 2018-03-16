@@ -1,4 +1,4 @@
-<div *ngIf="currentUser">
+<div *ngIf="currentUser" class="main-container">
   <header>
     <p> Hello, {{ currentUser.username }}. </p>
     <a [routerLink]="['/add-story']">Add a new letter</a>

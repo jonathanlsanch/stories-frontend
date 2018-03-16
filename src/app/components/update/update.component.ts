@@ -7,11 +7,11 @@ import "rxjs/add/operator/toPromise";
 
 
 @Component({
-  selector: 'app-story-details',
-  templateUrl: './story-details.component.html',
-  styleUrls: ['./story-details.component.css']
+  selector: 'app-update',
+  templateUrl: './update.component.html',
+  styleUrls: ['./update.component.css']
 })
-export class StoryDetailsComponent implements OnInit {
+export class UpdateComponent implements OnInit {
   story = <any>{};
 
   public updatedStory: Object = {};
@@ -105,7 +105,5 @@ export class StoryDetailsComponent implements OnInit {
         console.log(err);
       });
   }
-
-
 
 }

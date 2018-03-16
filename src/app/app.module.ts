@@ -17,6 +17,7 @@ import { AppRoutingModule  } from './app-routing.module';
 import { StoriesComponent } from './components/stories/stories.component';
 import { NewStoryComponent } from './components/new-story/new-story.component';
 import { StoryDetailsComponent } from './components/story-details/story-details.component';
+import { UpdateComponent } from './components/update/update.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { StoryDetailsComponent } from './components/story-details/story-details.
     LoginComponent,
     StoriesComponent,
     NewStoryComponent,
-    StoryDetailsComponent
+    StoryDetailsComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
