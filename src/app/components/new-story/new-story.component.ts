@@ -9,6 +9,7 @@ import { Router } from "@angular/router";
   styleUrls: ['./new-story.component.css']
 })
 export class NewStoryComponent implements OnInit {
+  
   storyData = {
     category: "",
     title: "",

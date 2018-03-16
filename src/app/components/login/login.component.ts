@@ -9,7 +9,6 @@ import { AuthService } from "../../services/auth.service";
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
-  // isLoggedOut: boolean = false;
 
   loginInfo = {
     username: "",
@@ -18,7 +17,10 @@ export class LoginComponent implements OnInit {
 
   loginErrorMessage: string;
 
-  constructor(private myAuthService: AuthService, private myRouter: Router) {}
+  constructor(
+    private myAuthService: AuthService,
+    private myRouter: Router
+  ) {}
 
   ngOnInit() {
     this.myAuthService
@@ -52,7 +54,8 @@ export class LoginComponent implements OnInit {
       })
       .catch(err => {
         const parsedError = err.json();
-        this.loginErrorMessage = parsedError.message + " 😤";
+        this.loginErrorMessage = parsedError.message + "😤";
+
       });
   }
 

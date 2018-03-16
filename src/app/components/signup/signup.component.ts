@@ -10,13 +10,18 @@ import { AuthService } from "../../services/auth.service";
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private myAuth: AuthService, private myRouter: Router) {}
-
-  errorMessage:String;
   signUpInfo={
     username:"",
     password:""
   }
+
+  errorMessage:String;
+
+  constructor(
+    private myAuth: AuthService,
+    private myRouter: Router
+  ) {}
+
   ngOnInit() {}
 
   doSignUp() {
