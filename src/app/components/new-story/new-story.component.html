@@ -8,7 +8,15 @@
   <form (ngSubmit)="saveNewStory()">
 
     <label for="story-category-input"> Letter Category </label>
-    <input id="story-category-input" type="text" placeholder="letter category" [(ngModel)]="storyData.category" name="category" required>
+    <select id="story-category-input" placeholder="letter category" [(ngModel)]="storyData.category" name="category" required>
+      <option value="Valentine">Valentine</option>
+      <option value="Anniversary">Anniversary</option>
+      <option value="Sorry">Sorry</option>
+      <option value="Love">Love</option>
+      <option value="Birthday">Birthday</option>
+      <option value="Holiday">Holiday</option>
+      <option value="Miss">I Miss You</option>
+    </select>
     <br>
 
     <label for="story-title-input"> Letter Title </label>
@@ -16,7 +24,15 @@
     <br>
 
     <label for="story-salutation-input"> Letter Salutation </label>
-    <input id="story-salutation-input" type="text" placeholder="letter salutation" [(ngModel)]="storyData.salutation" name="salutation">
+    <select id="story-salutation-input" placeholder="letter salutation" [(ngModel)]="storyData.salutation" name="salutation">
+      <option value="Dear">Dear</option>
+      <option value="Dearest">Dearest</option>
+      <option value="Hello">Hello</option>
+      <option value="Hi">Hi</option>
+      <option value="My">My</option>
+      <option value="For">For</option>
+      <option value="To">To</option>
+    </select>
     <br>
 
     <label for="story-recipient-input"> Letter Recipient </label>
@@ -28,7 +44,16 @@
     <br>
 
     <label for="story-signoff-input"> Letter Signoff </label>
-    <input id="story-signoff-input" type="text" placeholder="letter signoff" [(ngModel)]="storyData.signoff" name="signoff">
+    <select id="story-signoff-input" placeholder="letter signoff" [(ngModel)]="storyData.signoff" name="signoff">
+      <option value="With Love">With Love</option>
+      <option value="Sincerely">Sincerely</option>
+      <option value="Yours Truly">Yours Truly</option>
+      <option value="Very Best">Very Best</option>
+      <option value="Love">Love</option>
+      <option value="Signed">Signed</option>
+      <option value="Thank You">Thank You</option>
+      <option value="Best">Best</option>
+    </select>
     <br>
 
     <label for="story-sender-input"> Sender </label>
@@ -38,4 +63,6 @@
     <button> Save Letter </button>
 
   </form>
+  <br>
+  nvm, <a [routerLink]="['/stories']">back to letters</a>
 </div>

@@ -18,6 +18,7 @@ import { StoriesComponent } from './components/stories/stories.component';
 import { NewStoryComponent } from './components/new-story/new-story.component';
 import { StoryDetailsComponent } from './components/story-details/story-details.component';
 import { UpdateComponent } from './components/update/update.component';
+import { ValentineComponent } from './components/valentine/valentine.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { UpdateComponent } from './components/update/update.component';
     StoriesComponent,
     NewStoryComponent,
     StoryDetailsComponent,
-    UpdateComponent
+    UpdateComponent,
+    ValentineComponent
   ],
   imports: [
     BrowserModule,

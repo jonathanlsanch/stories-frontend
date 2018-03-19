@@ -9,7 +9,7 @@
 </div>
 
 
-<button *ngIf="story._id" (click)="deleteThisStory()">DELETE LETTER</button>
+<!-- <button *ngIf="story._id" (click)="deleteThisStory()">DELETE LETTER</button> -->
 <br>
 <a [routerLink]="['/update', story._id]">Edit Letter</a>
 <div>
@@ -37,7 +37,6 @@
       <option value="My">My</option>
       <option value="For">For</option>
       <option value="To">To</option>
-      <option value=" ">Blank</option>
   </select>
   <br>
 
@@ -58,7 +57,6 @@
       <option value="Signed">Signed</option>
       <option value="Thank You">Thank You</option>
       <option value="Best">Best</option>
-      <option value="">Blank</option>
   </select>
   <br>
 

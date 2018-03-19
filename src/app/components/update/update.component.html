@@ -1,8 +1,17 @@
+<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 
 <form (ngSubmit)="doTheUpdate(story._id, myForm)" #myForm="ngForm">
 
     <label for="story-category-input"> Letter Category </label>
-    <input id="story-category-input" type="text"  [(ngModel)]="story.category" name="category" value="{{ story.category }}">
+    <select id="story-category-input" [(ngModel)]="story.category" name="category" value="{{ story.category }}">
+        <option value="Valentine">Valentine</option>
+        <option value="Anniversary">Anniversary</option>
+        <option value="Sorry">Sorry</option>
+        <option value="Love">Love</option>
+        <option value="Birthday">Birthday</option>
+        <option value="Holiday">Holiday</option>
+        <option value="Miss">I Miss You</option>
+    </select>
     <br>
   
     <label for="story-title-input"> Letter Title </label>
@@ -18,7 +27,6 @@
         <option value="My">My</option>
         <option value="For">For</option>
         <option value="To">To</option>
-        <option value=" ">Blank</option>
     </select>
     <br>
   
@@ -33,13 +41,13 @@
     <label for="story-signoff-input"> Letter Signoff </label>
     <select id="story-signoff-input" [(ngModel)]="story.signoff" name="signoff" value="{{ story.signoff }}">
         <option value="With Love">With Love</option>
+        <option value="Sincerely">Sincerely</option>
         <option value="Yours Truly">Yours Truly</option>
         <option value="Very Best">Very Best</option>
         <option value="Love">Love</option>
         <option value="Signed">Signed</option>
         <option value="Thank You">Thank You</option>
         <option value="Best">Best</option>
-        <option value="">Blank</option>
     </select>
     <br>
   
@@ -52,3 +60,14 @@
 
   <button *ngIf="story._id" (click)="deleteThisStory()">DELETE LETTER</button>
   
+  <div class="entire-letter">
+    <h1>{{ story.title }}</h1>
+    <h4>Category: {{ story.category }}</h4>
+    <h3 class="letter-start"> {{ story.salutation }} {{ story.recipient }}, </h3> 
+    <p class="letter-content">{{ story.content }}</p>
+    <p class="letter-end">{{ story.signoff }},</p>
+    <p class="letter-sender">{{ story.sender }}</p>
+  </div>
+
+  <br>
+  nvm, <a [routerLink]="['/stories']">back to letters</a>

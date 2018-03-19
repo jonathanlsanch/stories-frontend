@@ -1,15 +1,19 @@
+
 <div *ngIf="currentUser" class="main-container">
-  <header>
-    <p> Hello, {{ currentUser.username }}. </p>
-    <a [routerLink]="['/add-story']">Add a new letter</a>
-    <button (click)="logMeOutPls()"> Log Out </button>
+    <button (click)="logMeOutPls()"> log out </button>
     <p *ngIf="logoutError" class="error">
       {{ logoutError }}
     </p>
+  <header>
+    <p> hello, {{ currentUser.username }}. </p>
+    <a [routerLink]="['/add-story']">create a letter.</a>
+    <br>
   </header>
   <h2>Letters List</h2>
 
   <div *ngFor="let story of stories">
     <a [routerLink]="['/stories', story._id]">{{ story.title }}</a>
   </div>
+
+
 </div>

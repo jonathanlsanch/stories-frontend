@@ -1,3 +1,25 @@
-.new-container{
+.entire-letter {
+    width: 30%;
+    margin: 0 auto;
+}
 
+.letter-start{
+    text-align: left;
+    font-style: italic;
+}
+
+.letter-content {
+    font-style: italic;
+}
+
+.letter-end {
+    text-align: right;
+    font-style: italic;
+}
+
+.letter-sender {
+    text-align: right;
+    font-style: italic;
+    font-size: 2em;
+    font-family: 'Great Vibes', Helvetica, sans-serif;
 }
