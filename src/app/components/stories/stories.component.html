@@ -1,19 +1,26 @@
+<div class="show-container">
+  <div *ngIf="currentUser" class="main-container">
 
-<div *ngIf="currentUser" class="main-container">
-    <button (click)="logMeOutPls()"> log out </button>
-    <p *ngIf="logoutError" class="error">
-      {{ logoutError }}
-    </p>
-  <header>
-    <p> hello, {{ currentUser.username }}. </p>
-    <a [routerLink]="['/add-story']">create a letter.</a>
-    <br>
-  </header>
-  <h2>Letters List</h2>
+      <p *ngIf="logoutError" class="error">
+        {{ logoutError }}
+      </p>
+    <div class="header">
+        <div class="typewriter">
+            <h1> hello, {{ currentUser.username }}. </h1>
+          </div>
+          <br>
+      <a [routerLink]="['/add-story']">create a letter.</a>
+      <br>
+    </div>
+    <h2>Letters List</h2>
 
-  <div *ngFor="let story of stories">
-    <a [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+    <div *ngFor="let story of stories">
+      <a [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+    </div>
+
+    <button class="btn" (click)="logMeOutPls()"> log out </button>
+
   </div>
-
-
 </div>
+
+

@@ -1,2 +1,59 @@
-.login-container {
+.login-page {
+    /* width: 90vw; */
+    height: 100vh;
+    background-image: url("../../../images/Invitation.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    /* background-position:center; */
+    /* margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    resize: both;
+    overflow: auto; */
+}
+
+@media screen and (max-width: 37.8125em) {
+    .login-page {      
+           background: #fff;
+           width: 100vw;
+           height: 100vh;
+           padding: 80px;
+           overflow: auto;
+           background-image: url("../../../images/mediabg.png");
+           background-size:cover;
+           background-repeat: no-repeat;
+           background-position:center;
+    }
+  }
+
+.login-box {
+    /* width: 50%; */
+    padding: 20px;
+    /* float:none; */
+    /* margin:0 auto; */
+    margin: auto;
+    padding: 20% 0;
+}
+
+
+h1 {
+    font-family: 'Abril Fatface';
+    font-size: 7rem;
+    letter-spacing: .3rem;
+}
+
+.username {
+    margin-bottom: 1%;
+    border-radius: 2%;
+}
+
+.btn {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.error {
+    font-size: 2rem;
 }
