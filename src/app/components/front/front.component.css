@@ -1,15 +1,37 @@
 .front-container {
     height: 100vh;
     /* background-color: #D75D58; */
-    color: white;
-    background-image: url("../../../images/show.jpg");
+    color: #221d1d;
+    background-image: url("../../../images/InvitationNew.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0;
   }
 
+
+@media screen and (max-width: 37.8125em) {
+  .front-container {      
+         background: #fff;
+         width: 100vw;
+         height: 100vh;
+         overflow: auto;
+         background-image: url("../../../images/invitationmedia.png");
+         background-size:cover;
+         background-repeat: no-repeat;
+         background-position:center;
+  }
+}
+
+.front-container-text {
+    /* padding: 20px; */
+    margin: auto;
+    padding: 20% 0;
+}
+
+.btn {
+  width: 25%;
+}
+
 .typewriter{
-    padding-top: 100px;
     width: 40%;
     margin: 0 auto;
 }

@@ -20,11 +20,11 @@
     <br>
 
     <label for="story-title-input"> Letter Title </label>
-    <input id="story-title-input" type="text" placeholder="letter title" [(ngModel)]="storyData.title" name="title">
+    <input id="story-title-input" type="text" [(ngModel)]="storyData.title" name="title">
     <br>
 
     <label for="story-salutation-input"> Letter Salutation </label>
-    <select id="story-salutation-input" placeholder="letter salutation" [(ngModel)]="storyData.salutation" name="salutation">
+    <select id="story-salutation-input" [(ngModel)]="storyData.salutation" name="salutation">
       <option value="Dear">Dear</option>
       <option value="Dearest">Dearest</option>
       <option value="Hello">Hello</option>
@@ -36,15 +36,15 @@
     <br>
 
     <label for="story-recipient-input"> Letter Recipient </label>
-    <input id="story-recipient-input" type="text" placeholder="letter recipient" [(ngModel)]="storyData.recipient" name="recipient">
+    <input id="story-recipient-input" type="text" [(ngModel)]="storyData.recipient" name="recipient">
     <br>
 
     <label for="story-content-input"> Letter Content </label>
-    <input id="story-content-input" type="text" placeholder="letter content" [(ngModel)]="storyData.content" name="content">
+    <input id="story-content-input" type="text" [(ngModel)]="storyData.content" name="content">
     <br>
 
     <label for="story-signoff-input"> Letter Signoff </label>
-    <select id="story-signoff-input" placeholder="letter signoff" [(ngModel)]="storyData.signoff" name="signoff">
+    <select id="story-signoff-input" [(ngModel)]="storyData.signoff" name="signoff">
       <option value="With Love">With Love</option>
       <option value="Sincerely">Sincerely</option>
       <option value="Yours Truly">Yours Truly</option>
@@ -57,7 +57,7 @@
     <br>
 
     <label for="story-sender-input"> Sender </label>
-    <input id="story-sender-input" type="text" placeholder="letter sender" [(ngModel)]="storyData.sender" name="sender">
+    <input id="story-sender-input" type="text" [(ngModel)]="storyData.sender" name="sender">
     <br>
 
     <button> Save Letter </button>
@@ -67,7 +67,7 @@
   nvm, <a [routerLink]="['/stories']">back to letters</a>
 </div>
 
-<div class="envelope" title="">
+<!-- <div class="envelope" title="">
     <div class="back"></div>
     <form action="mailto:someone@yoursite.com?subject=Mail from Our Site" class="letter">
       <p>
@@ -86,7 +86,6 @@
     </form>
   </div>
 
-  <!DOCTYPE html>
 <html>
 <body>
 
@@ -107,4 +106,4 @@ Comment:<br>
 </body>
 </html>
 
-<a href="mailto:someone@yoursite.com?subject=Mail from Our Site">Email Us</a>  
+<a href="mailto:someone@yoursite.com?subject=Mail from Our Site">Email Us</a>   -->
