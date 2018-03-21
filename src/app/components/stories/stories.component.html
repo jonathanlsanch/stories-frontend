@@ -1,9 +1,11 @@
+
 <div class="show-container">
   <div *ngIf="currentUser" class="main-container">
 
       <p *ngIf="logoutError" class="error">
         {{ logoutError }}
       </p>
+
     <div class="header">
         <div class="typewriter">
             <h1> hello, {{ currentUser.username }}. </h1>

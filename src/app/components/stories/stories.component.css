@@ -1,8 +1,14 @@
 .show-container {
   height: 100vh;
-  background-color: #D75D58;
+  /* background-color: #D75D58; */
   color: white;
+  height: 100vh;
+  background-image: url("../../../images/show.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
 }
+
+
 
 h2 {
   font-family: 'Abril Fatface';

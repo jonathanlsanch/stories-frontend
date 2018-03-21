@@ -66,3 +66,45 @@
   <br>
   nvm, <a [routerLink]="['/stories']">back to letters</a>
 </div>
+
+<div class="envelope" title="">
+    <div class="back"></div>
+    <form action="mailto:someone@yoursite.com?subject=Mail from Our Site" class="letter">
+      <p>
+        <label>Name:</label>
+        <input type="text" name="name" />
+      </p>
+      <p>
+        <label>Email:</label>
+        <input type="email" name="email" />
+      </p>
+      <p>
+        <label>Message:</label>
+        <textarea></textarea>
+      </p>
+      <input type="submit" value="Send"/>
+    </form>
+  </div>
+
+  <!DOCTYPE html>
+<html>
+<body>
+
+<h2>Send e-mail to someone@example.com:</h2>
+
+<form action="mailto:someone@yoursite.com?subject=Mail from Our Site" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+E-mail:<br>
+<input type="text" name="mail"><br>
+Comment:<br>
+<input type="text" name="comment" size="50"><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+<a href="mailto:someone@yoursite.com?subject=Mail from Our Site">Email Us</a>
+</form>
+
+</body>
+</html>
+
+<a href="mailto:someone@yoursite.com?subject=Mail from Our Site">Email Us</a>  
