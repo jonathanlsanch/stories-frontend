@@ -19,6 +19,7 @@ import { NewStoryComponent } from './components/new-story/new-story.component';
 import { StoryDetailsComponent } from './components/story-details/story-details.component';
 import { UpdateComponent } from './components/update/update.component';
 import { ValentineComponent } from './components/valentine/valentine.component';
+import { FrontComponent } from './components/front/front.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ValentineComponent } from './components/valentine/valentine.component';
     NewStoryComponent,
     StoryDetailsComponent,
     UpdateComponent,
-    ValentineComponent
+    ValentineComponent,
+    FrontComponent
   ],
   imports: [
     BrowserModule,

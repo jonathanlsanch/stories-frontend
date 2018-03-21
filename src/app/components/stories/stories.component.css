@@ -2,17 +2,14 @@
   height: 100vh;
   /* background-color: #D75D58; */
   color: white;
-  height: 100vh;
   background-image: url("../../../images/show.jpg");
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
+  margin: 0;
 }
 
-
-
 h2 {
-  font-family: 'Abril Fatface';
-
+  font-family: "Abril Fatface";
 }
 
 .btn {
@@ -22,32 +19,39 @@ h2 {
   width: 55vh;
   margin: 0 auto;
 }
-  /* DEMO-SPECIFIC STYLES */
-  .typewriter h1 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid black; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .5s step-end infinite;
-      font-family: 'Abril Fatface';
-  }
-  
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: black }
-  }
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  font-family: "Abril Fatface";
+}
 
-  a {
-    color: black;
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
   }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+a {
+  color: black;
+}
+

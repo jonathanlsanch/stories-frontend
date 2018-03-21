@@ -16,6 +16,8 @@
   <a [routerLink]="['/stories']">Back to Letters</a>
 </div>
 
+<a href="mailto:someone@yoursite.com?&subject={{story.title }}&body={{story.salutation}}{{story.recipient}},{{ story.content }}">Email This Letter</a>
+
 <!-- update stories area -->
 <!-- 
 <form (ngSubmit)="doTheUpdate(story._id, myForm)" #myForm="ngForm">

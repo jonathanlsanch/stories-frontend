@@ -1,7 +1,9 @@
-Valentine's
+<div class="love-container">
+Love
 
 <div *ngIf="currentUser" class="main-container">
 
 <div *ngFor="let story of stories">
   <a *ngIf="story.category === 'Valentine'" [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+</div>
 </div>

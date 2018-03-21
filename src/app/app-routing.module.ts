@@ -7,6 +7,7 @@ import { NewStoryComponent } from './components/new-story/new-story.component';
 import { StoryDetailsComponent } from './components/story-details/story-details.component';
 import { UpdateComponent } from './components/update/update.component';
 import { ValentineComponent } from "./components/valentine/valentine.component";
+import { FrontComponent } from './components/front/front.component';
 
 
 const routes: Routes = [
@@ -15,8 +16,12 @@ const routes: Routes = [
     component: SignupComponent
   },
   {
-    path: "",
+    path: "login",
     component: LoginComponent
+  },
+  {
+    path: "",
+    component: FrontComponent
   },
   {
     path: "stories",
