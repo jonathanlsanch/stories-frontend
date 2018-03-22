@@ -8,6 +8,7 @@ import { StoryDetailsComponent } from './components/story-details/story-details.
 import { UpdateComponent } from './components/update/update.component';
 import { ValentineComponent } from "./components/valentine/valentine.component";
 import { FrontComponent } from './components/front/front.component';
+import { HowitworksComponent } from './components/howitworks/howitworks.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: "valentine",
     component: ValentineComponent
+  },
+  {
+    path: "howitworks",
+    component: HowitworksComponent
   }
 
 ];

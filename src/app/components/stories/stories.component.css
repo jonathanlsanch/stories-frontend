@@ -33,6 +33,11 @@ span {
    color: black !important;
    font-family: 'Merriweather';
  }
+
+ p {
+   font-family: 'Merriweather';
+   color: black;
+ }
 .how {
   background-color: ;
 

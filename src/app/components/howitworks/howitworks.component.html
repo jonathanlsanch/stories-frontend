@@ -1,29 +1,26 @@
 <nav class="navbar navbar-default navbar-fixed-top navbar-right navbar-custom">
   <div class="container">
     <span>Your's Truly</span>
-    <a href="/how-it-works" class="btn btn-default how">How It Works</a>
-    <a href="/stories" class="btn btn-default category">Home Page</a>
+    <a href="/stories" class="btn btn-default how">Home Page</a>
+    <a href="/valentine" class="btn btn-default category">Letters by Category</a>
     <a href="/add-story" class="btn btn-default create">Create a Letter</a>
     <button class="btn btn-default logout" (click)="logMeOutPls()"> Log Out </button>
   </div>
 </nav>
 
 <div class="show-container">
-<div *ngIf="currentUser" class="main-container">
+<!-- <div *ngIf="currentUser" class="main-container">
   <p *ngIf="logoutError" class="error">
     {{ logoutError }}
-  </p>
+  </p> -->
 
   
 
   <div class="header">
     <div class="typewriter">
-      <h1> Letter Library </h1>
+      <h1> How It Works </h1>
     </div>
 
-  <div *ngFor="let story of stories">
-    <a [routerLink]="['/stories', story._id]">{{ story.title }}</a>
-  </div>
 
 
 </div>

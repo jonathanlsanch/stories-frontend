@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top navbar-right navbar-custom">
     <div class="container">
       <span>Your's Truly</span>
-      <a href="/how-it-works" class="btn btn-default how">How It Works</a>
+      <a href="/howitworks" class="btn btn-default how">How It Works</a>
       <a href="/valentine" class="btn btn-default category">Letters by Category</a>
       <a href="/add-story" class="btn btn-default create">Create a Letter</a>
       <button class="btn btn-default logout" (click)="logMeOutPls()"> Log Out </button>
@@ -21,16 +21,14 @@
         <h1> Hello, {{ currentUser.username }}. </h1>
       </div>
       <br>
-      <a [routerLink]="['/add-story']">create a letter.</a>
+      <p>hover below to get started.</p>
       <br>
     </div>
-
-    <img src="../../../assets/images/envelope.png">
-
-    <div *ngFor="let story of stories">
-      <a [routerLink]="['/stories', story._id]">{{ story.title }}</a>
-    </div>
-
+<a href="/add-story">
+    <img src="../../../assets/images/mail.png"
+        onmouseover="this.src='../../../assets/images/mailhovertext.png';"
+        onmouseout="this.src='../../../assets/images/mail.png';"/>
+</a>
 
   </div>
 </div>

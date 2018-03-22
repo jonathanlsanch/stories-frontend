@@ -20,6 +20,7 @@ import { StoryDetailsComponent } from './components/story-details/story-details.
 import { UpdateComponent } from './components/update/update.component';
 import { ValentineComponent } from './components/valentine/valentine.component';
 import { FrontComponent } from './components/front/front.component';
+import { HowitworksComponent } from './components/howitworks/howitworks.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FrontComponent } from './components/front/front.component';
     StoryDetailsComponent,
     UpdateComponent,
     ValentineComponent,
-    FrontComponent
+    FrontComponent,
+    HowitworksComponent
   ],
   imports: [
     BrowserModule,
