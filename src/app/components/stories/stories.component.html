@@ -14,6 +14,8 @@
       {{ logoutError }}
     </p>
 
+    
+
     <div class="header">
       <div class="typewriter">
         <h1> Hello, {{ currentUser.username }}. </h1>
@@ -23,6 +25,7 @@
       <br>
     </div>
 
+    <img src="../../../assets/images/envelope.png">
 
     <div *ngFor="let story of stories">
       <a [routerLink]="['/stories', story._id]">{{ story.title }}</a>
