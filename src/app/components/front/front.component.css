@@ -23,12 +23,23 @@
 
 .front-container-text {
     /* padding: 20px; */
-    margin: auto;
-    padding: 20% 0;
+    margin: 0 auto;
+    /* padding: 20% 0; */
+    padding-top: 15%;
+}
+
+.buttons-container {
+  padding-top: 6%;
 }
 
 .btn {
-  width: 25%;
+  font-size: 2rem;
+  background-color: #white;
+  padding: 5px 20px;
+  border-color: white;
+  border-radius: 10px;
+  color: black;
+  font-family: 'Merriweather';
 }
 
 .typewriter{
@@ -41,13 +52,12 @@ h1 {
     font-size: 8rem;
 }
 h2 {
-    font-family: "Abril Fatface";
-    font-size: 2.8rem;
-    letter-spacing: 0.1em;
+  font-family: 'Merriweather', serif;
+    font-size: 2rem;
 }
 
 .main-text {
-    width: 40%;
+    width: 30%;
     margin: 0 auto;
 }
 

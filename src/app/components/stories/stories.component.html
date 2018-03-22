@@ -1,3 +1,13 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-right navbar-custom">
+    <div class="container">
+      <span>Your's Truly</span>
+      <a href="/how-it-works" class="btn btn-default how">How It Works</a>
+      <a href="/valentine" class="btn btn-default category">Letters by Category</a>
+      <a href="/add-story" class="btn btn-default create">Create a Letter</a>
+      <button class="btn btn-default logout" (click)="logMeOutPls()"> Log Out </button>
+    </div>
+  </nav>
+
 <div class="show-container">
   <div *ngIf="currentUser" class="main-container">
     <p *ngIf="logoutError" class="error">
@@ -6,19 +16,18 @@
 
     <div class="header">
       <div class="typewriter">
-        <h1> hello, {{ currentUser.username }}. </h1>
+        <h1> Hello, {{ currentUser.username }}. </h1>
       </div>
       <br>
       <a [routerLink]="['/add-story']">create a letter.</a>
       <br>
     </div>
-    <h2>Letters List</h2>
+
 
     <div *ngFor="let story of stories">
       <a [routerLink]="['/stories', story._id]">{{ story.title }}</a>
     </div>
 
-    <button class="btn" (click)="logMeOutPls()"> log out </button>
 
   </div>
 </div>

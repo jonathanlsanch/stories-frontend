@@ -1,71 +1,29 @@
 <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+<div class="details-container">
+
 <div class="entire-letter">
   <h1>{{ story.title }}</h1>
   <h4>Category: {{ story.category }}</h4>
   <h3 class="letter-start"> {{ story.salutation }} {{ story.recipient }}, </h3> 
   <p class="letter-content">{{ story.content }}</p>
-  <p class="letter-end">{{ story.signoff }},</p>
+  <h3 class="letter-end">{{ story.signoff }},</h3>
   <p class="letter-sender">{{ story.sender }}</p>
 </div>
 
 
 <!-- <button *ngIf="story._id" (click)="deleteThisStory()">DELETE LETTER</button> -->
 <br>
+<i class="fas fa-envelope-square"></i>
+<i class="fas fa-edit"></i>
 <a [routerLink]="['/update', story._id]">Edit Letter</a>
 <div>
   <a [routerLink]="['/stories']">Back to Letters</a>
 </div>
 
+<i class="fas fa-envelope-square"></i>
+<i class="fas fa-edit"> <a [routerLink]="['/update', story._id]"></a></i>
+
 <a href="mailto:kimkardashian@gmail.com?&subject={{story.title }}&body={{story.salutation}} {{story.recipient}},
 {{ story.content }}">Email This Letter</a>
 
-<!-- update stories area -->
-<!-- 
-<form (ngSubmit)="doTheUpdate(story._id, myForm)" #myForm="ngForm">
-
-  <label for="story-category-input"> Letter Category </label>
-  <input id="story-category-input" type="text"  [(ngModel)]="story.category" name="category" value="{{ story.category }}">
-  <br>
-
-  <label for="story-title-input"> Letter Title </label>
-  <input id="story-title-input" type="text"  [(ngModel)]="story.title" name="title" value="{{ story.title }}">
-  <br>
-
-  <label for="story-salutation-input"> Letter Salutation </label>
-  <select id="story-salutation-input" [(ngModel)]="story.salutation" name="salutation" value="{{ story.salutation }}">
-      <option value="Dear">Dear</option>
-      <option value="Dearest">Dearest</option>
-      <option value="Hello">Hello</option>
-      <option value="Hi">Hi</option>
-      <option value="My">My</option>
-      <option value="For">For</option>
-      <option value="To">To</option>
-  </select>
-  <br>
-
-  <label for="story-recipient-input"> Letter Recipient </label>
-  <input id="story-recipient-input" type="text"  [(ngModel)]="story.recipient" name="recipient" value="{{ story.recipient }}">
-  <br>
-
-  <label for="story-content-input"> Letter Content </label>
-  <input id="story-content-input" type="text"  [(ngModel)]="story.content" name="content" value="{{ story.content }}">
-  <br>
-
-  <label for="story-signoff-input"> Letter Signoff </label>
-  <select id="story-signoff-input" [(ngModel)]="story.signoff" name="signoff" value="{{ story.signoff }}">
-      <option value="With Love">With Love</option>
-      <option value="Yours Truly">Yours Truly</option>
-      <option value="Very Best">Very Best</option>
-      <option value="Love">Love</option>
-      <option value="Signed">Signed</option>
-      <option value="Thank You">Thank You</option>
-      <option value="Best">Best</option>
-  </select>
-  <br>
-
-  <label for="story-sender-input"> Letter Sender </label>
-  <input id="story-sender-input" type="text"  [(ngModel)]="story.sender" name="sender" value="{{ story.sender }}">
-  <br>
-
-  <button type="submit">Update Letter</button>
-</form> -->
+</div>
