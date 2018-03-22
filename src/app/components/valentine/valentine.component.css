@@ -7,11 +7,13 @@
     background-repeat: no-repeat;
     margin: 0;
     padding-top: 10%;
+    width: 100%;
   }
   
   .container {
     padding-top: 1rem;
     text-align: right;
+    width: 100%;
   
   }
   
@@ -138,4 +140,7 @@
   width: 0;
   }
   
-  
+  /* .help {
+    width: 40%;
+    margin: 10%;
+  } */

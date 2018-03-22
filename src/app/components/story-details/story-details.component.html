@@ -13,15 +13,10 @@
 
 <!-- <button *ngIf="story._id" (click)="deleteThisStory()">DELETE LETTER</button> -->
 <br>
-<i class="fas fa-envelope-square"></i>
-<i class="fas fa-edit"></i>
 <a [routerLink]="['/update', story._id]">Edit Letter</a>
 <div>
   <a [routerLink]="['/stories']">Back to Letters</a>
 </div>
-
-<i class="fas fa-envelope-square"></i>
-<i class="fas fa-edit"> <a [routerLink]="['/update', story._id]"></a></i>
 
 <a href="mailto:kimkardashian@gmail.com?&subject={{story.title }}&body={{story.salutation}} {{story.recipient}},
 {{ story.content }}">Email This Letter</a>

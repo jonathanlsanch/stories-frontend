@@ -7,8 +7,10 @@
     <button class="btn btn-default logout" (click)="logMeOutPls()"> Log Out </button>
   </div>
 </nav>
+<div class="container">
+    <div class="row">
 
-<div class="show-container">
+      <div class="show-container">
 <div *ngIf="currentUser" class="main-container">
   <p *ngIf="logoutError" class="error">
     {{ logoutError }}
@@ -21,8 +23,46 @@
       <h1> Letter Library </h1>
     </div>
 
-  <div *ngFor="let story of stories">
-    <a [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+
+  <div class="col-md-6 help">
+
+    <h2>Valentine</h2>
+      <div *ngFor="let story of stories">
+        <a *ngIf="story.category === 'Valentine'" [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+      </div>
+    
+    <h2>Sorry</h2>
+      <div *ngFor="let story of stories">
+        <a *ngIf="story.category === 'Sorry'" [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+      </div>
+    <h2>Love</h2>
+      <div *ngFor="let story of stories">
+        <a *ngIf="story.category === 'Love'" [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+      </div>
+  </div>
+
+  <div class="col-md-6 help">
+    <h2>Birthday</h2>
+      <div *ngFor="let story of stories">
+        <a *ngIf="story.category === 'Birthday'" [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+      </div>
+    <h2>I Miss You</h2>
+      <div *ngFor="let story of stories">
+        <a *ngIf="story.category === 'I Miss You'" [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+      </div>
+    <h2>Holiday</h2>
+      <div *ngFor="let story of stories">
+        <a *ngIf="story.category === 'Holiday'" [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+      </div>
+    </div>
+<!--   
+    <div class="col-md-5 help">
+    <h2>Anniversary</h2>
+    <div *ngFor="let story of stories">
+      <a *ngIf="story.category === 'Anniversary'" [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+    </div>
+    </div> -->
+    </div>
   </div>
 
 

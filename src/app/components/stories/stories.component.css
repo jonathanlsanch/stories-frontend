@@ -24,7 +24,7 @@ span {
 
 
 .navbar-default {
-  background-color: white;
+  background-color: #F5F5F5;
   background-image: none;
   background-repeat: no-repeat;
  }
@@ -64,7 +64,7 @@ h2 {
   width: 55vh;
   margin: 0 auto;
 }
-/* DEMO-SPECIFIC STYLES */
+
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid black; /* The typwriter cursor */

@@ -1,7 +1,7 @@
 .signup-page {
     /* width: 90vw; */
     height: 100vh;
-    background-image: url("../../../images/Invitation.png");
+    background-image: url("../../../images/InvitationNew.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     /* background-position:center; */
@@ -13,6 +13,20 @@
     resize: both;
     overflow: auto; */
 }
+
+@media screen and (max-width: 37.8125em) {
+    .signup-page {      
+           background: #fff;
+           width: 100vw;
+           height: 100vh;
+           padding: 80px;
+           overflow: auto;
+           background-image: url("../../../images/invitationmedia.png");
+           background-size:cover;
+           background-repeat: no-repeat;
+           background-position:center;
+    }
+  }
 
 .signup-box {
     /* width: 50%; */
@@ -33,4 +47,13 @@ h1 {
 .username {
     margin-bottom: 1%;
     border-radius: 2%;
+}
+
+.btn {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.error {
+    font-size: 2rem;
 }
