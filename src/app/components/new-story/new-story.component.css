@@ -17,6 +17,15 @@ h3 {
     margin: 0 auto;
 }
 
+span{
+  color: white;
+  font-family: 'Merriweather';
+}
+
+a{
+  color: white;
+}
+
 .letter-start{
     text-align: left;
     font-style: italic;

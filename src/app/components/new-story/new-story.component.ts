@@ -9,6 +9,8 @@ import { Router } from "@angular/router";
   styleUrls: ['./new-story.component.css']
 })
 export class NewStoryComponent implements OnInit {
+
+  latestStory: any = {};
   
   storyData = {
     category: "",
@@ -45,12 +47,23 @@ export class NewStoryComponent implements OnInit {
         sender: ""
       } 
       this.savingErr = "";
-      this.myRouter.navigate(['/stories'])
+
+      this.myStoryService.getLatestStory()
+      .then(resultFromApi => {
+        this.latestStory = resultFromApi;
+        console.log("this is the latest STOOOOORRY============= ", resultFromApi);
+
+      this.myRouter.navigate(['/stories', resultFromApi._id])
     }
     )
     .catch( err => {
       this.savingErr = "Something is wrong with saving."
     })
-  }
+
+
+
+    });
+}
+
 
 }

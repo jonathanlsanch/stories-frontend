@@ -24,6 +24,16 @@ export class StoryService {
     // .map(res => res.json())
   }
 
+  getLatestStory(){
+
+    return this.myHttp
+    .get(`${environment.apiBase}/api/stories/latest`,
+    { withCredentials: true })
+    .toPromise()
+    .then(res => res.json());
+  }
+
+
 
   createNewStory(dataToSend){
     return this.myHttp

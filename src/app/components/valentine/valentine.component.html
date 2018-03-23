@@ -28,31 +28,32 @@
 
     <h2>Valentine</h2>
       <div *ngFor="let story of stories">
-        <a *ngIf="story.category === 'Valentine'" [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+          <a *ngIf="story.category === 'Valentine'" [routerLink]="['/stories', story._id]">{{ story.title }} By: {{ story.sender }}</a>
       </div>
     
     <h2>Sorry</h2>
       <div *ngFor="let story of stories">
-        <a *ngIf="story.category === 'Sorry'" [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+          <a *ngIf="story.category === 'Sorry'" [routerLink]="['/stories', story._id]">{{ story.title }} By: {{ story.sender }}</a>
       </div>
+
     <h2>Love</h2>
       <div *ngFor="let story of stories">
-        <a *ngIf="story.category === 'Love'" [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+        <a *ngIf="story.category === 'Love'" [routerLink]="['/stories', story._id]">{{ story.title }} By: {{ story.sender }}</a>
       </div>
   </div>
 
   <div class="col-md-6 help">
     <h2>Birthday</h2>
       <div *ngFor="let story of stories">
-        <a *ngIf="story.category === 'Birthday'" [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+        <a *ngIf="story.category === 'Birthday'" [routerLink]="['/stories', story._id]">{{ story.title }} By: {{ story.sender }}</a>
       </div>
     <h2>I Miss You</h2>
       <div *ngFor="let story of stories">
-        <a *ngIf="story.category === 'I Miss You'" [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+        <a *ngIf="story.category === 'I Miss You'" [routerLink]="['/stories', story._id]">{{ story.title }} By: {{ story.sender }}</a>
       </div>
     <h2>Holiday</h2>
       <div *ngFor="let story of stories">
-        <a *ngIf="story.category === 'Holiday'" [routerLink]="['/stories', story._id]">{{ story.title }}</a>
+        <a *ngIf="story.category === 'Holiday'" [routerLink]="['/stories', story._id]">{{ story.title }} By: {{ story.sender }}</a>
       </div>
     </div>
 <!--   

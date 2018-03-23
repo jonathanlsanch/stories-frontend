@@ -83,6 +83,14 @@ h3 {
     font-size: 6rem;
 }
   
+span{
+    color: white;
+    font-family: 'Merriweather';
+  }
+  
+  a{
+    color: white;
+  }
 
 h3 {
     font-family: "Abril Fatface";
