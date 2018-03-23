@@ -57,17 +57,18 @@
     <br>
   
     <button class="btn btn-default"type="submit">Update Letter</button>
+    <button *ngIf="story._id" class="btn btn-default" (click)="deleteThisStory()">Delete Letter</button>
   </form>
 
-  <!-- <button *ngIf="story._id" (click)="deleteThisStory()">DELETE LETTER</button>
-  <div class="entire-letter">
+
+  <!-- <div class="entire-letter">
         <h4>{{ story.title }}</h4>
         <p>Category: {{ story.category }}</p>
         <p class="letter-start"> {{ story.salutation }} {{ story.recipient }}, </p> 
         <p class="letter-content">{{ story.content }}</p>
         <p class="letter-end">{{ story.signoff }},</p>
         <p class="letter-sender">{{ story.sender }}</p>
-      </div> -->
+      </div>  -->
   <br>
   <span>nvm, <a [routerLink]="['/stories']">back to letters</a></span> 
 
