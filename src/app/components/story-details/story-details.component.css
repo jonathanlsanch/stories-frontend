@@ -1,11 +1,12 @@
 .details-container {
-    height: 120vh;
+    height: 100vh;
     color: black;
     background-color: #f4eeed;
+    padding-top: 1%;
 }
 
 .entire-letter {
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     text-align: center;
     padding-top: 1%;
@@ -13,7 +14,8 @@
 
 h1 {
     font-family: "Abril Fatface";
-    font-size: 6.5rem;
+    font-size: 4.5rem;
+    /* padding-top: 5%; */
 }
 
 h4 {
